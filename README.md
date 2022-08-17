@@ -9,3 +9,4 @@ In the project directory, you can run:
 ### `npm start`
 
 ## Demo
+<img width="100%" src="https://user-images.githubusercontent.com/61957322/185042653-f9a1acec-db60-4a4e-ba15-e070c3e47ec8.gif"/>
