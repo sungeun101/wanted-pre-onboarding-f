@@ -85,14 +85,14 @@ export default function TodoItem(props: { item: TodoResponse; getTodos: any }) {
                   newTodo === "" || newTodo === todo ? "text-gray-400" : ""
                 }
               >
-                수정
+                Edit
               </span>
             </button>
             <button
               onClick={cancelEdit}
               className="border-blue-100 border-2 px-2 rounded-lg text-xs"
             >
-              취소
+              Cancel
             </button>
           </div>
         </>
@@ -113,10 +113,13 @@ export default function TodoItem(props: { item: TodoResponse; getTodos: any }) {
             </span>
           </div>
           <div className="flex gap-3">
-            <button onClick={() => setIsEditMode(true)}>
+            <button
+              className="flex items-center"
+              onClick={() => setIsEditMode(true)}
+            >
               <EditOutlined />
             </button>
-            <button onClick={deleteTodo}>
+            <button className="flex items-center" onClick={deleteTodo}>
               <DeleteOutlined />
             </button>
           </div>

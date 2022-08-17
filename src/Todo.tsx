@@ -41,6 +41,7 @@ export default function Todo() {
   const createTodo = async (event: React.FormEvent<HTMLFormElement>) => {
     try {
       event.preventDefault();
+      if (todo === "") return;
       await axiosInstance.post(`/todos`, { todo });
     } catch (error: unknown) {
       if (error instanceof Error && error.message.includes("400")) {
@@ -78,7 +79,7 @@ export default function Todo() {
               autoFocus={true}
               className="border-blue-100 border-2 p-1 rounded-lg"
             />
-            <button type="submit">
+            <button type="submit" className="flex text-lg">
               <PlusCircleOutlined />
             </button>
           </form>

@@ -103,17 +103,21 @@ const Login = () => {
           placeholder="Email"
           value={email}
           onChange={handleEmailChange}
+          className="border-blue-100 border-2 px-1 rounded-md"
         />
         <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={handlePasswordChange}
+          className="border-blue-100 border-2 px-1 rounded-md"
         />
         <button
           type="submit"
           disabled={submitDisabled}
-          className="bg-blue-200 rounded-sm mt-4"
+          className={`rounded-md mt-4 ${
+            submitDisabled ? "bg-slate-200" : "bg-blue-200"
+          }`}
         >
           {loading ? <LoadingOutlined /> : "Login"}
         </button>
